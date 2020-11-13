@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			AMAZON REVIEWS
+		</div>
+		<h2>SENTIMENT ANALYSIS</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Message Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="10" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Predict">
+		
+		
+	</form>
+		
+	</div>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+
+		Enter The Product URL For WEEKLY REPORT
+		
+	</div>
+	</header>
+	
+
+
+	<div class="ml-container">
+		
+        	<form action="{{ url_for("week")}}" method="POST">
+			<textarea name="prod" rows="2" cols="50"></textarea>
+			<br/>
+		
+			<input type="submit" class="btn-info" value="Confirm">	
+        	</form>
+
+    	</div>
+		
+		
+	</form>
+		
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Sentiment Of Text</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:50;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 'VERY NEGATIVE'%}
+	<h2 style="color:red;font-size:30">VERY NEGATIVE</h2>
+	{% elif prediction == 'NEGATIVE'%}
+	<h2 style="color:red;font-size:30">NEGATIVE</h2>
+	{% elif prediction == 'NEUTRAL'%}
+	<h2 style="color:orange;font-size:30">NEUTRAL</h2>
+	{% elif prediction == 'POSITIVE'%}
+	<h2 style="color:green;font-size:30">POSITIVE</h2>
+	{% elif prediction == 'VERY POSITIVE'%}
+	<h2 style="color:green;font-size:30">VERY POSITIVE</h2>
+	{% endif %}
+	
+	
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+
+{% for table in tables %}
+	{{titles[loop.index]}}
+	{{table|safe}}
+{% endfor %}
+
+{% if weeks!= None %}
+<img src="data:images/png;base64,{{ weeks }}" \width="400" height="200">
+
+{% endif %}
+
+</body>
+</html>
