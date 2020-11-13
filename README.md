@@ -1,1 +1,1 @@
-# Sentiment_analysis-for-amazon_reviews-and-deployment-in-flask
+# Sentiment_analysis-for-amazon_reviews-and-deployment-using-flask
